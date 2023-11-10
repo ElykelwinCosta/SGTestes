@@ -1,0 +1,27 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'users/styles.css' %}"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <h1>SGTestes</h1>
+        <input type="text" name="email" placeholder="E-mail"><br>
+        <input type="password" name="password" placeholder="Senha"><br>
+        <input type="submit" value="Login">
+        {% if error_message %}
+            <p style="color: red;">{{ error_message }}</p>
+        {% endif %}
+        <p>
+            <a href="{% url 'password_reset' %}">Esqueceu sua senha?</a>
+        </p>
+        <p>
+            <a href="{% url 'create_account' %}">Criar conta</a>
+        </p>
+    </form>
+</body>
+</html>

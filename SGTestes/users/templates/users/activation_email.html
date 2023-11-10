@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Ative sua conta</title>
+</head>
+<body>
+    <h1>Olá {{ user.username }}, Ative sua conta no SGTestes</h1>
+
+    <p>Clique no link abaixo para ativar sua conta:</p>
+    <a href="http://{{ domain }}{% url 'activate' uidb64=uid token=token %}">Ativar conta</a>
+
+    <p>Se você não criou uma conta no SGTestes, ignore este e-mail.</p>
+</body>
+</html>

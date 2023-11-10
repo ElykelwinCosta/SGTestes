@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Cenários de Teste</title>
+</head>
+<body>
+    <h1>Lista de Cenários de Teste</h1>
+    <!-- Exibição da lista de cenários de teste -->
+    <ul>
+        {% for scenario in scenarios %}
+            <li>{{ scenario.title }}</li>
+            <!-- Outras informações do cenário -->
+        {% endfor %}
+    </ul>
+</body>
+</html>

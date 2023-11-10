@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    
+    <h2>Test Scenarios</h2>
+    <ul>
+        {% for scenario in test_scenarios %}
+            <li>{{ scenario.name }} - {{ scenario.description }}</li>
+            <!-- Adicione mais campos do modelo TestScenario conforme necessário -->
+        {% endfor %}
+    </ul>
+
+    <!-- Adicione mais elementos HTML para exibir outros dados no dashboard -->
+</body>
+</html>
